@@ -4,6 +4,9 @@ import numpy as np
 def step_function(x):
     return 1 if x >= 0 else 0
 
+def sigmoid(x):
+    return 1/(1 + np.exp(-x))
+
 def predict(X, weights):
     z = np.dot(X, weights)
     return np.array([step_function(z_i) for z_i in z])
