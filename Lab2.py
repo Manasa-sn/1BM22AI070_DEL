@@ -22,7 +22,7 @@ def train_perceptron(X, y, learning_rate=0.01):
         flag = True
         for i in range(len(X)):
             z = np.dot(X[i], weights)
-            y_pred = step_function(z)
+            y_pred = step_function(z)  #Sigmoid function can be used
             error = y[i] - y_pred
             if (y[i] == 1 and y_pred == 0) or (y[i] == 0 and y_pred == 1):
                 flag = False
